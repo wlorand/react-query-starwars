@@ -30,3 +30,20 @@
   border-color: #fff;
   color: #fff;
 }
+
+.app-card {
+  background: #1b1b1b;
+  border-radius: 20px;
+  margin: 16px 0;
+  padding: 8px 16px;
+}
+
+.app-card__title {
+  color: #ffff57;
+  margin: 10px 0;
+}
+
+.app-card__attr {
+  color: #999;
+  margin: 6px 0;
+}
