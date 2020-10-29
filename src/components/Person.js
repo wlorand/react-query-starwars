@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React from 'react'; // not needed for React 17
 
 // styles
 import '../app.css';

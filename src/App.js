@@ -1,4 +1,4 @@
-// import React from 'react';
+// import React from 'react'; // not needed for react 17
 import { useState } from 'react';
 
 // child components
@@ -17,6 +17,7 @@ function App() {
       <h1 className="app-title">Star Wars Info</h1>
       <Navbar setPage={setPage} />
       <div className="app-content">
+        {/* conditional rendering via ternary */}
         {page === 'planets' ? <Planets /> : <People />}
       </div>
     </div>
