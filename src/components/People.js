@@ -13,8 +13,8 @@ import '../app.css';
 const SWAPI_PEOPLE_ENDPOINT = 'https://swapi.dev/api/people/';
 
 const fetchPeople = async () => {
-  const res = await axios.get(SWAPI_PEOPLE_ENDPOINT);
-  return res.data;
+  const data = await axios.get(SWAPI_PEOPLE_ENDPOINT).then((res) => res.data);
+  return data;
 };
 
 function People() {

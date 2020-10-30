@@ -13,13 +13,17 @@ import '../app.css';
 const SWAPI_PLANETS_ENDPOINT = 'https://swapi.dev/api/planets/';
 
 const fetchPlanets = async () => {
-  const res = await axios.get(SWAPI_PLANETS_ENDPOINT);
-  return res.data;
+  const data = await axios.get(SWAPI_PLANETS_ENDPOINT).then((res) => res.data);
+  return data;
 };
 
 function Planets() {
   // use the useQuery hook
-  const { data, status } = useQuery('planets', fetchPlanets);
+  const { data, status } = useQuery('planets', fetchPlanets, {
+    staleTime: 3000,
+    cacheTime: 10, // default = 300000 (5 mins)
+    onSucess: () => console.log('data fetched with no problemo'),
+  });
 
   console.log(data);
 
@@ -28,7 +32,6 @@ function Planets() {
       <h2>Planets</h2>
       {status === 'loading' && <div>Loading Data...</div>}
       {status === 'error' && <div>Error Fetching Data</div>}
-
       {status === 'success' && (
         <div>
           {data.results.map((planet) => (
