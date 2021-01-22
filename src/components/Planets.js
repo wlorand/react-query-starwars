@@ -8,7 +8,7 @@ import { useQuery } from 'react-query';
 import Planet from './Planet';
 
 // styles
-import '../app.css';
+import '../styles/app.css';
 
 const SWAPI_PLANETS_ENDPOINT = 'https://swapi.dev/api/planets/';
 

@@ -8,7 +8,7 @@ import { useQuery } from 'react-query';
 import Person from './Person';
 
 // styles
-import '../app.css';
+import '../styles/app.css';
 
 const SWAPI_PEOPLE_ENDPOINT = 'https://swapi.dev/api/people/';
 

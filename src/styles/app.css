@@ -1,5 +1,13 @@
 /* app global styles */
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #222;
+  color: #ddd;
+  text-align: center;
+}
+
 .app {
   margin: 0 auto;
   width: 960px;
