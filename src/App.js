@@ -10,7 +10,7 @@ import People from './components/People';
 import Planets from './components/Planets';
 
 // styles
-import './app.css';
+import './styles/app.css';
 
 function App() {
   // define a piece of state for the 'page' the app should display
